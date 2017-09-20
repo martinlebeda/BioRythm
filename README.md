@@ -28,4 +28,4 @@ Tray icon and menu:
 
 ## Install
 
-Copy program BioRythm to your favourite path and executable. Settings is stored in ".BioRythm.xml" in actual path (I recommend run from home directory).
+[Download](https://github.com/martinlebeda/BioRythm/releases) and copy program BioRythm to your favourite path and executable. Settings is stored in ".BioRythm.xml" in actual path (I recommend run from home directory).
