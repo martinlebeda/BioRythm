@@ -15,12 +15,15 @@ can specify scripts which run on start work and pause interval.
 ## Overview
 
 Main window:
+
 ![Main window](screenshots/main.png)
 
 Options:
+
 ![Options](screenshots/options.png)
 
 Tray icon and menu:
+
 ![Tray icon and menu](screenshots/traymenu.png)
 
 ## Install
