@@ -62,6 +62,7 @@ type
     tik_tak: TTimer;
     TrayIcon: TTrayIcon;
     MainAppXMLPropStr: TXMLPropStorage;
+    Procedure acBlockInput(Sender: TObject);
     Procedure acExitExecute(Sender: TObject);
     procedure acNotDisturbExecute(Sender: TObject);
     Procedure acOptionsExecute(Sender: TObject);
@@ -92,6 +93,8 @@ type
     { private declarations }
     toEnd: integer; // čas do konce v minutách
     isAction: boolean;
+    FBlockInput: boolean;
+    FAutoHide: boolean;
     procedure doNormalDisturb;
     procedure doStartWorkInterval;
     procedure doStartPauseInterval;
@@ -165,7 +168,9 @@ end;
 
 procedure TfrmMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  if toEnd > 0 then
+  if FBlockInput then
+    CloseAction := caNone
+  else if toEnd > 0 then
   begin
     CloseAction := caHide; // caMinimize;
     hideForm;
@@ -210,6 +215,11 @@ Procedure TfrmMain.acExitExecute(Sender: TObject);
 Begin
   startInterval(0);
   Self.Close;
+end;
+
+Procedure TfrmMain.acBlockInput(Sender: TObject);
+Begin
+  (Sender as TAction).Enabled := not FBlockInput;
 end;
 
 Procedure TfrmMain.acOptionsExecute(Sender: TObject);
@@ -270,8 +280,11 @@ end;
 
 Procedure TfrmMain.hideTimerTimer(Sender: TObject);
 Begin
-  Application.Minimize;
+  if FAutoHide then
+    Application.Minimize;
+
   hideTimer.Enabled := False;
+  FBlockInput := False
 end;
 
 procedure TfrmMain.ti_owerClick(Sender: TObject);
@@ -343,11 +356,11 @@ End;
 
 Procedure TfrmMain.AutoHideFormAfter(aAfterSec: Cardinal);
 Begin
-  If (frmMain.WindowState = wsMinimized) Or Not frmMain.visible Then
-  Begin
-    hideTimer.Interval := aAfterSec * 1000;
-    hideTimer.Enabled := True;
-  End;
+  FBlockInput := true;
+  FAutoHide := (frmMain.WindowState = wsMinimized) Or Not frmMain.visible;
+
+  hideTimer.Interval := aAfterSec * 1000;
+  hideTimer.Enabled := True;
 End;
 
 procedure TfrmMain.doStartWorkInterval;

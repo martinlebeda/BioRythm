@@ -148,59 +148,72 @@ object frmMain: TfrmMain
     object acStartWorkInterval: TAction
       Caption = 'Work'
       OnExecute = acStartWorkIntervalExecute
+      OnUpdate = acBlockInput
     end
     object acStartPauseInterval: TAction
       Caption = 'Pause'
       OnExecute = acStartPauseIntervalExecute
+      OnUpdate = acBlockInput
     end
     object acNormalDisturb: TAction
       Caption = 'Normal disturb'
       OnExecute = acNormalDisturbExecute
+      OnUpdate = acBlockInput
     end
     object acNotDisturb: TAction
       Category = 'Not disturb'
       Caption = 'DND'
       OnExecute = acNotDisturbExecute
+      OnUpdate = acBlockInput
     end
     object acOptions: TAction
       Caption = 'Settings'
       OnExecute = acOptionsExecute
+      OnUpdate = acBlockInput
       ShortCut = 16463
     end
     object acExit: TAction
       Caption = 'Exit application'
       OnExecute = acExitExecute
+      OnUpdate = acBlockInput
       ShortCut = 32856
     end
     object acStartInterval0: TAction
       Caption = 'Stop timer'
       ImageIndex = 7
       OnExecute = acStartInterval0Execute
+      OnUpdate = acBlockInput
     end
     object acStartInterval1: TAction
       Caption = '+1 min'
       OnExecute = acStartInterval1Execute
+      OnUpdate = acBlockInput
     end
     object acStartInterval5: TAction
       Caption = '+5 min'
       OnExecute = acStartInterval5Execute
+      OnUpdate = acBlockInput
     end
     object acStartInterval10: TAction
       Caption = '+10 min'
       OnExecute = acStartInterval10Execute
+      OnUpdate = acBlockInput
     end
     object acStartInterval15: TAction
       Caption = '+15 min'
       OnExecute = acStartInterval15Execute
+      OnUpdate = acBlockInput
     end
     object acStartInterval30: TAction
       Caption = '+30 min'
       OnExecute = acStartInterval30Execute
+      OnUpdate = acBlockInput
     end
     object acPauseTimer: TAction
       Caption = 'Pause timer'
       ImageIndex = 5
       OnExecute = acPauseTimerExecute
+      OnUpdate = acBlockInput
     end
   end
   object TrayIcon: TTrayIcon
