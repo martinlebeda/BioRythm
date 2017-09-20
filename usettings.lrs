@@ -1,0 +1,38 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TfrmSettings','FORMDATA',[
+  'TPF0'#12'TfrmSettings'#11'frmSettings'#4'Left'#3'&'#2#6'Height'#3#206#0#3'To'
+  +'p'#3#165#0#5'Width'#3#30#2#11'BorderStyle'#7#8'bsDialog'#7'Caption'#6#8'Set'
+  +'tings'#12'ClientHeight'#3#206#0#11'ClientWidth'#3#30#2#10'OnActivate'#7#12
+  +'FormActivate'#6'OnShow'#7#8'FormShow'#8'Position'#7#17'poDefaultSizeOnly'#10
+  +'LCLVersion'#6#7'1.6.0.4'#0#6'TLabel'#16'lblStartInterval'#4'Left'#2#24#6'He'
+  +'ight'#2#15#3'Top'#2#16#5'Width'#3#132#0#7'Caption'#6#22'Start interval (min'
+  +'.):'#11'ParentColor'#8#7'OnClick'#7#21'lblStartIntervalClick'#0#0#5'TEdit'
+  +#16'edtStartInterval'#4'Left'#3#176#0#6'Height'#2#25#3'Top'#2#11#5'Width'#2
+  +'P'#11'NumbersOnly'#9#8'TabOrder'#2#0#4'Text'#6#2'20'#0#0#7'TButton'#2'Ok'#4
+  +'Left'#3#200#1#6'Height'#2#25#3'Top'#3#168#0#5'Width'#2'K'#7'Caption'#6#2'Ok'
+  +#7'OnClick'#7#7'OkClick'#8'TabOrder'#2#1#0#0#7'TButton'#6'Cancel'#4'Left'#3
+  +'h'#1#6'Height'#2#25#3'Top'#3#168#0#5'Width'#2'K'#7'Caption'#6#6'Cancel'#7'O'
+  +'nClick'#7#11'CancelClick'#8'TabOrder'#2#2#0#0#6'TLabel'#15'lblWorkInterval'
+  +#4'Left'#2#24#6'Height'#2#15#3'Top'#2'-'#5'Width'#3#132#0#7'Caption'#6#22'St'
+  +'art interval (min.):'#11'ParentColor'#8#7'OnClick'#7#21'lblStartIntervalCli'
+  +'ck'#0#0#5'TEdit'#15'edtWorkInterval'#4'Left'#3#176#0#6'Height'#2#25#3'Top'#2
+  +'('#5'Width'#2'P'#11'NumbersOnly'#9#8'TabOrder'#2#3#4'Text'#6#2'20'#0#0#6'TL'
+  +'abel'#16'lblPauseInterval'#4'Left'#2#24#6'Height'#2#15#3'Top'#2'M'#5'Width'
+  +#3#132#0#7'Caption'#6#22'Start interval (min.):'#11'ParentColor'#8#7'OnClick'
+  +#7#21'lblStartIntervalClick'#0#0#5'TEdit'#16'edtPauseInterval'#4'Left'#3#176
+  +#0#6'Height'#2#25#3'Top'#2'H'#5'Width'#2'P'#11'NumbersOnly'#9#8'TabOrder'#2#4
+  +#4'Text'#6#2'20'#0#0#6'TLabel'#12'lblDndScript'#4'Left'#2#24#6'Height'#2#15#3
+  +'Top'#2'm'#5'Width'#2'J'#7'Caption'#6#11'DND script:'#11'ParentColor'#8#7'On'
+  +'Click'#7#21'lblStartIntervalClick'#0#0#5'TEdit'#12'edtDndScript'#4'Left'#2
+  +'p'#6'Height'#2#25#3'Top'#2'h'#5'Width'#3'p'#1#11'NumbersOnly'#9#8'TabOrder'
+  +#2#5#0#0#6'TLabel'#11'lblDnScript'#4'Left'#2#24#6'Height'#2#15#3'Top'#3#137#0
+  +#5'Width'#2'@'#7'Caption'#6#10'DN script:'#11'ParentColor'#8#7'OnClick'#7#21
+  +'lblStartIntervalClick'#0#0#5'TEdit'#11'edtDnScript'#4'Left'#2'p'#6'Height'#2
+  +#25#3'Top'#3#132#0#5'Width'#3'p'#1#11'NumbersOnly'#9#8'TabOrder'#2#6#0#0#6'T'
+  +'Label'#15'lblTimerWarning'#4'Left'#3' '#1#6'Height'#2#15#3'Top'#2#16#5'Widt'
+  +'h'#3#132#0#7'Caption'#6#22'Start interval (min.):'#11'ParentColor'#8#7'OnCl'
+  +'ick'#7#21'lblStartIntervalClick'#0#0#5'TEdit'#15'edtTimerWarning'#4'Left'#3
+  +#176#1#6'Height'#2#25#3'Top'#2#11#5'Width'#2'P'#11'NumbersOnly'#9#8'TabOrder'
+  +#2#7#4'Text'#6#2'20'#0#0#0
+]);
