@@ -34,5 +34,8 @@ LazarusResources.Add('TfrmSettings','FORMDATA',[
   +'h'#3#154#0#7'Caption'#6#23'Warn before end (min.):'#11'ParentColor'#8#7'OnC'
   +'lick'#7#21'lblStartIntervalClick'#0#0#5'TEdit'#15'edtTimerWarning'#4'Left'#3
   +#176#1#6'Height'#2#25#3'Top'#2#11#5'Width'#2'P'#11'NumbersOnly'#9#8'TabOrder'
-  +#2#7#4'Text'#6#2'20'#0#0#0
+  +#2#7#4'Text'#6#2'20'#0#0#9'TCheckBox'#15'chDisturbOnStop'#4'Left'#3#16#1#6'H'
+  +'eight'#2#21#3'Top'#2','#5'Width'#3#234#0#8'BidiMode'#7#13'bdRightToLeft'#7
+  +'Caption'#6' Set normal disturb on stop timer'#14'ParentBidiMode'#8#8'TabOrd'
+  +'er'#2#8#0#0#0
 ]);

@@ -135,4 +135,14 @@ object frmSettings: TfrmSettings
     TabOrder = 7
     Text = '20'
   end
+  object chDisturbOnStop: TCheckBox
+    Left = 272
+    Height = 21
+    Top = 44
+    Width = 234
+    BidiMode = bdRightToLeft
+    Caption = 'Set normal disturb on stop timer'
+    ParentBidiMode = False
+    TabOrder = 8
+  end
 end

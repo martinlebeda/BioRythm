@@ -12,6 +12,7 @@ Type
   { TfrmSettings }
 
   TfrmSettings = Class(TForm)
+    chDisturbOnStop: TCheckBox;
     edtDndScript: TEdit;
     edtDnScript: TEdit;
     edtTimerWarning: TEdit;
@@ -59,7 +60,7 @@ Begin
   frmMain.MainAppXMLPropStr.StoredValue[CFG_DISTURB_NOT] := edtDndScript.Text;
   frmMain.MainAppXMLPropStr.StoredValue[CFG_DISTURB_NORMAL] := edtDnScript.Text;
   frmMain.MainAppXMLPropStr.StoredValue[CFG_WARNING_TIME] := edtTimerWarning.Text;
-
+  frmMain.MainAppXMLPropStr.StoredValue[CFG_WARNING_TIME] := BoolToStr(chDisturbOnStop.Checked);
   Self.close;
 end;
 
@@ -81,6 +82,7 @@ Begin
   edtDndScript.Text := frmMain.MainAppXMLPropStr.StoredValue[CFG_DISTURB_NOT];
   edtDnScript.Text  := frmMain.MainAppXMLPropStr.StoredValue[CFG_DISTURB_NORMAL];
   edtTimerWarning.Text := frmMain.MainAppXMLPropStr.StoredValue[CFG_WARNING_TIME];
+  chDisturbOnStop.Checked := StrToBool(frmMain.MainAppXMLPropStr.StoredValue[CFG_WARNING_TIME]);
 end;
 
 Initialization

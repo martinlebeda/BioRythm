@@ -669,6 +669,10 @@ object frmMain: TfrmMain
         Name = 'WarningTime'
         Value = '5'
         KeyString = 'WarningTime'
+      end    
+      item
+        Name = 'DisturbOnStop'
+        KeyString = 'DisturbOnStop'
       end>
     FileName = '.BioRythm.xml'
     left = 8

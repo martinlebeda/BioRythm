@@ -123,13 +123,13 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="151"/>
-        <CursorPos X="7" Y="173"/>
+        <TopLine Value="485"/>
+        <CursorPos X="71" Y="502"/>
         <UsageCount Value="53"/>
         <Bookmarks Count="3">
-          <Item0 X="11" Y="488" ID="3"/>
-          <Item1 X="12" Y="362" ID="1"/>
-          <Item2 X="6" Y="283" ID="2"/>
+          <Item0 X="11" Y="494" ID="3"/>
+          <Item1 X="6" Y="289" ID="2"/>
+          <Item2 X="5" Y="523" ID="1"/>
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -212,10 +212,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uSettings"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="43"/>
-        <CursorPos X="81" Y="49"/>
-        <ComponentState Value="1"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="45"/>
+        <CursorPos X="96" Y="85"/>
         <UsageCount Value="28"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -223,11 +222,10 @@
       <Unit13>
         <Filename Value="/usr/lib/lazarus/1.6/lcl/forms.pp"/>
         <UnitName Value="Forms"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="44"/>
         <CursorPos X="29" Y="63"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit13>
       <Unit14>
         <Filename Value="/usr/lib/lazarus/1.6/lcl/include/application.inc"/>
@@ -239,133 +237,131 @@
       <Unit15>
         <Filename Value="/usr/lib/lazarus/1.6/lcl/extctrls.pp"/>
         <UnitName Value="ExtCtrls"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="1221"/>
         <CursorPos X="45" Y="1241"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit15>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="uMain.pas"/>
-        <Caret Line="409" TopLine="385"/>
+        <Caret Line="273" Column="6" TopLine="248"/>
       </Position1>
       <Position2>
         <Filename Value="uMain.pas"/>
-        <Caret Line="410" TopLine="385"/>
+        <Caret Line="348" Column="12" TopLine="327"/>
       </Position2>
       <Position3>
         <Filename Value="uMain.pas"/>
-        <Caret Line="411" TopLine="385"/>
+        <Caret Line="277" Column="3" TopLine="250"/>
       </Position3>
       <Position4>
         <Filename Value="uMain.pas"/>
-        <Caret Line="412" TopLine="385"/>
+        <Caret Line="349" Column="4" TopLine="329"/>
       </Position4>
       <Position5>
         <Filename Value="uMain.pas"/>
-        <Caret Line="413" TopLine="385"/>
+        <Caret Line="277" Column="23" TopLine="172"/>
       </Position5>
       <Position6>
         <Filename Value="uMain.pas"/>
-        <Caret Line="414" TopLine="385"/>
+        <Caret Line="350" Column="13" TopLine="329"/>
       </Position6>
       <Position7>
         <Filename Value="uMain.pas"/>
-        <Caret Line="466" TopLine="443"/>
+        <Caret Line="78" Column="34" TopLine="68"/>
       </Position7>
       <Position8>
         <Filename Value="uMain.pas"/>
-        <Caret Line="468" TopLine="443"/>
+        <Caret Line="96" Column="23" TopLine="76"/>
       </Position8>
       <Position9>
         <Filename Value="uMain.pas"/>
-        <Caret Line="263" Column="3" TopLine="243"/>
+        <Caret Line="8" Column="39"/>
       </Position9>
       <Position10>
         <Filename Value="uMain.pas"/>
-        <Caret Line="404" TopLine="381"/>
+        <Caret Column="11"/>
       </Position10>
       <Position11>
         <Filename Value="uMain.pas"/>
-        <Caret Line="421" TopLine="382"/>
+        <Caret Line="220" Column="37" TopLine="218"/>
       </Position11>
       <Position12>
         <Filename Value="uMain.pas"/>
-        <Caret Line="408" Column="16" TopLine="382"/>
+        <Caret Line="228" Column="36" TopLine="203"/>
       </Position12>
       <Position13>
         <Filename Value="uMain.pas"/>
-        <Caret Line="346" TopLine="338"/>
+        <Caret Line="174" Column="11" TopLine="146"/>
       </Position13>
       <Position14>
-        <Filename Value="uMain.pas"/>
-        <Caret Line="351" Column="24" TopLine="338"/>
+        <Filename Value="usettings.pas"/>
+        <Caret Line="61" Column="83" TopLine="44"/>
       </Position14>
       <Position15>
         <Filename Value="uMain.pas"/>
-        <Caret Line="404" Column="33" TopLine="385"/>
+        <Caret Line="113" Column="27" TopLine="92"/>
       </Position15>
       <Position16>
         <Filename Value="uMain.pas"/>
-        <Caret Line="346" Column="64" TopLine="323"/>
+        <Caret Line="519" Column="5" TopLine="481"/>
       </Position16>
       <Position17>
         <Filename Value="uMain.pas"/>
-        <Caret Line="349" Column="12" TopLine="323"/>
       </Position17>
       <Position18>
         <Filename Value="uMain.pas"/>
-        <Caret Line="273" Column="6" TopLine="248"/>
+        <Caret Line="20" Column="20"/>
       </Position18>
       <Position19>
         <Filename Value="uMain.pas"/>
-        <Caret Line="348" Column="12" TopLine="327"/>
+        <Caret Line="199" Column="17" TopLine="196"/>
       </Position19>
       <Position20>
         <Filename Value="uMain.pas"/>
-        <Caret Line="277" Column="3" TopLine="250"/>
+        <Caret Line="185" Column="12" TopLine="151"/>
       </Position20>
       <Position21>
         <Filename Value="uMain.pas"/>
-        <Caret Line="349" Column="4" TopLine="329"/>
+        <Caret Line="522" Column="72" TopLine="485"/>
       </Position21>
       <Position22>
         <Filename Value="uMain.pas"/>
-        <Caret Line="277" Column="23" TopLine="172"/>
+        <Caret Line="523" TopLine="485"/>
       </Position22>
       <Position23>
         <Filename Value="uMain.pas"/>
-        <Caret Line="350" Column="13" TopLine="329"/>
+        <Caret Line="524" TopLine="485"/>
       </Position23>
       <Position24>
         <Filename Value="uMain.pas"/>
-        <Caret Line="78" Column="34" TopLine="68"/>
+        <Caret Line="20" Column="20"/>
       </Position24>
       <Position25>
         <Filename Value="uMain.pas"/>
-        <Caret Line="96" Column="23" TopLine="76"/>
+        <Caret Line="196" Column="6" TopLine="171"/>
       </Position25>
       <Position26>
         <Filename Value="uMain.pas"/>
-        <Caret Line="8" Column="39"/>
+        <Caret Line="381" Column="3" TopLine="379"/>
       </Position26>
       <Position27>
         <Filename Value="uMain.pas"/>
-        <Caret Column="11"/>
+        <Caret Line="522" TopLine="485"/>
       </Position27>
       <Position28>
         <Filename Value="uMain.pas"/>
-        <Caret Line="220" Column="37" TopLine="218"/>
+        <Caret Line="523" TopLine="485"/>
       </Position28>
       <Position29>
         <Filename Value="uMain.pas"/>
-        <Caret Line="228" Column="36" TopLine="203"/>
+        <Caret Line="381" TopLine="358"/>
       </Position29>
       <Position30>
         <Filename Value="uMain.pas"/>
-        <Caret Line="174" Column="11" TopLine="146"/>
+        <Caret Line="382" Column="25" TopLine="358"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>
@@ -389,7 +385,7 @@
     </Linking>
   </CompilerOptions>
   <Debugging>
-    <BreakPoints Count="1">
+    <BreakPoints Count="3">
       <Item1>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
@@ -397,6 +393,20 @@
         <Source Value="uonscreen.pas"/>
         <Line Value="35"/>
       </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="uMain.pas"/>
+        <Line Value="522"/>
+      </Item2>
+      <Item3>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="uMain.pas"/>
+        <Line Value="381"/>
+      </Item3>
     </BreakPoints>
     <Watches Count="2">
       <Item1>

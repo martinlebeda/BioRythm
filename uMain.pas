@@ -110,17 +110,19 @@ type
     procedure endInterval;
     procedure setTrayIcon(aIcon: TTrayIconType);
     procedure writeTimeToFile;
+    procedure disturbOnStop;
   public
     { public declarations }
   end;
 
 const
-  CFG_INTERVAL_START = 'StartInterval';
-  CFG_INTERVAL_WORK  = 'WorkInterval';
-  CFG_INTERVAL_PAUSE = 'PauseInterval';
-  CFG_DISTURB_NORMAL = 'NormalDisturb';
-  CFG_DISTURB_NOT    = 'NotDisturb';
-  CFG_WARNING_TIME   = 'WarningTime';
+  CFG_INTERVAL_START  = 'StartInterval';
+  CFG_INTERVAL_WORK   = 'WorkInterval';
+  CFG_INTERVAL_PAUSE  = 'PauseInterval';
+  CFG_DISTURB_NORMAL  = 'NormalDisturb';
+  CFG_DISTURB_NOT     = 'NotDisturb';
+  CFG_WARNING_TIME    = 'WarningTime';
+  CFG_DISTURB_ON_STOP = 'DisturbOnStop';
 
 var
   frmMain: TfrmMain;
@@ -133,7 +135,7 @@ const
 
 { TfrmMain }
 
-procedure TfrmMain.FormCreate(Sender: TObject);
+Procedure TfrmMain.FormCreate(Sender: TObject);
 begin
   MainAppXMLPropStr.Restore;
   startInterval(StrToInt(MainAppXMLPropStr.StoredValue[CFG_INTERVAL_START]));
@@ -143,7 +145,7 @@ begin
   btnPause.Caption := '';
 end;
 
-procedure TfrmMain.FormHide(Sender: TObject);
+Procedure TfrmMain.FormHide(Sender: TObject);
 begin
   frmMain.ShowInTaskBar := stNever;
 end;
@@ -166,7 +168,7 @@ Begin
   Application.Minimize;
 end;
 
-procedure TfrmMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+Procedure TfrmMain.FormClose(Sender: TObject; Var CloseAction: TCloseAction);
 begin
   if FBlockInput then
     CloseAction := caNone
@@ -174,19 +176,22 @@ begin
   begin
     CloseAction := caHide; // caMinimize;
     hideForm;
+  End
+  else
+  begin
+    // on realy close
+    DeleteFile(TMR_FILENAME); {TODO -oLebeda -cNone: realy??}
+    MainAppXMLPropStr.Save;
+    disturbOnStop;
   End;
-
-  DeleteFile(TMR_FILENAME); {TODO -oLebeda -cNone: realy??}
-
-  MainAppXMLPropStr.Save;
 end;
 
-procedure TfrmMain.acStartWorkIntervalExecute(Sender: TObject);
+Procedure TfrmMain.acStartWorkIntervalExecute(Sender: TObject);
 begin
   doStartWorkInterval;
 end;
 
-procedure TfrmMain.acNormalDisturbExecute(Sender: TObject);
+Procedure TfrmMain.acNormalDisturbExecute(Sender: TObject);
 begin
   doNormalDisturb;
 end;
@@ -194,6 +199,7 @@ end;
 Procedure TfrmMain.acStartInterval0Execute(Sender: TObject);
 Begin
   startInterval(0);
+  disturbOnStop;
 end;
 
 Procedure TfrmMain.acStartInterval10Execute(Sender: TObject);
@@ -201,12 +207,12 @@ Begin
   startInterval(10);
 end;
 
-procedure TfrmMain.acStartPauseIntervalExecute(Sender: TObject);
+Procedure TfrmMain.acStartPauseIntervalExecute(Sender: TObject);
 begin
   doStartPauseInterval;
 end;
 
-procedure TfrmMain.acNotDisturbExecute(Sender: TObject);
+Procedure TfrmMain.acNotDisturbExecute(Sender: TObject);
 begin
   doNotDisturb;
 end;
@@ -252,17 +258,17 @@ Begin
   startInterval(5);
 end;
 
-procedure TfrmMain.nerusitClick(Sender: TObject);
+Procedure TfrmMain.nerusitClick(Sender: TObject);
 begin
   doNotDisturb;
 end;
 
-procedure TfrmMain.rusitClick(Sender: TObject);
+Procedure TfrmMain.rusitClick(Sender: TObject);
 begin
 
 end;
 
-procedure TfrmMain.tik_takTimer(Sender: TObject);
+Procedure TfrmMain.tik_takTimer(Sender: TObject);
 begin
   toEnd := toEnd - 1;
   setLabel;
@@ -287,12 +293,12 @@ Begin
   FBlockInput := False
 end;
 
-procedure TfrmMain.ti_owerClick(Sender: TObject);
+Procedure TfrmMain.ti_owerClick(Sender: TObject);
 begin
   Application.Restore;
 end;
 
-procedure TfrmMain.TrayIcon1Click(Sender: TObject);
+Procedure TfrmMain.TrayIcon1Click(Sender: TObject);
 begin
   // při kladném čísle zastavit, při záporném přidat 10 minut
   if (toEnd > 0) then
@@ -304,12 +310,12 @@ begin
   end;
 end;
 
-procedure TfrmMain.acShowMainFormExecute(Sender: TObject);
+Procedure TfrmMain.acShowMainFormExecute(Sender: TObject);
 begin
   frmMain.Show;
 end;
 
-procedure TfrmMain.TrayIconClick(Sender: TObject);
+Procedure TfrmMain.TrayIconClick(Sender: TObject);
 begin
   if not frmMain.visible or (frmMain.WindowState = wsMinimized) then
     frmMain.Show
@@ -318,7 +324,7 @@ begin
   // pause;
 end;
 
-procedure TfrmMain.startInterval(aMinute: integer);
+Procedure TfrmMain.startInterval(aMinute: integer);
 begin
   setNormalStatus;
   tik_tak.Enabled := False; // zastavení timeru
@@ -341,7 +347,7 @@ begin
   writeTimeToFile;
 end;
 
-procedure TfrmMain.doNotDisturb;
+Procedure TfrmMain.doNotDisturb;
 begin
   Process.CommandLine := MainAppXMLPropStr.StoredValue[CFG_DISTURB_NOT];
   if Process.CommandLine <> '' then
@@ -363,28 +369,28 @@ Begin
   hideTimer.Enabled := True;
 End;
 
-procedure TfrmMain.doStartWorkInterval;
+Procedure TfrmMain.doStartWorkInterval;
 begin
   startInterval(0);
   startInterval(StrToInt(MainAppXMLPropStr.StoredValue[CFG_INTERVAL_WORK]));
   doNotDisturb;
 end;
 
-procedure TfrmMain.doNormalDisturb;
+Procedure TfrmMain.doNormalDisturb;
 begin
   Process.CommandLine := MainAppXMLPropStr.StoredValue[CFG_DISTURB_NORMAL];
   if Process.CommandLine <> '' then
     Process.Execute;
 end;
 
-procedure TfrmMain.doStartPauseInterval;
+Procedure TfrmMain.doStartPauseInterval;
 begin
   startInterval(0);
   startInterval(StrToInt(MainAppXMLPropStr.StoredValue[CFG_INTERVAL_PAUSE]));
   doNormalDisturb;
 end;
 
-procedure TfrmMain.pause;
+Procedure TfrmMain.pause;
 begin
   setNormalStatus;
   tik_tak.Enabled := not (tik_tak.Enabled);
@@ -406,13 +412,13 @@ begin
 end;
 
 
-procedure TfrmMain.setNormalStatus;
+Procedure TfrmMain.setNormalStatus;
 begin
   Self.FormStyle := fsNormal;
   Self.Color := clDefault;
 end;
 
-procedure TfrmMain.setOwerStatus;
+Procedure TfrmMain.setOwerStatus;
 begin
   Self.FormStyle := fsStayOnTop;
   Self.Position := poScreenCenter;
@@ -442,7 +448,7 @@ Begin
   End;
 End;
 
-procedure TfrmMain.setLabel;
+Procedure TfrmMain.setLabel;
 var
   min, sec: integer;
 begin
@@ -462,7 +468,7 @@ begin
   TrayIcon.Hint := lblZobrazeni.Caption;
 end;
 
-procedure TfrmMain.endInterval;
+Procedure TfrmMain.endInterval;
 begin
   // tik_tak.Enabled:= false; // jen at počítá i přesčas
   //Process.CommandLine := 'notify-send Časovač "Vypršel časovač"';
@@ -476,7 +482,7 @@ begin
   // TrayIcon.ShowBalloonHint;
 end;
 
-procedure TfrmMain.setTrayIcon(aIcon: TTrayIconType);
+Procedure TfrmMain.setTrayIcon(aIcon: TTrayIconType);
 var
   iconIndex: Integer;
   Bmp: TBitmap;
@@ -500,7 +506,7 @@ begin
   end;
 end;
 
-procedure TfrmMain.writeTimeToFile;
+Procedure TfrmMain.writeTimeToFile;
 begin
   with TStringList.Create do
     try
@@ -510,6 +516,12 @@ begin
       Free;
     end;
 end;
+
+Procedure TfrmMain.disturbOnStop;
+Begin
+  if StrToBool(frmMain.MainAppXMLPropStr.StoredValue[CFG_WARNING_TIME]) then
+    acNormalDisturb.Execute;
+End;
 
 initialization
   {$I uMain.lrs}

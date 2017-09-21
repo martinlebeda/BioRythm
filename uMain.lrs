@@ -537,9 +537,10 @@ LazarusResources.Add('TfrmMain','FORMDATA',[
   +#6#2'10'#9'KeyString'#6#13'PauseInterval'#0#1#4'Name'#6#13'NormalDisturb'#9
   +'KeyString'#6#13'NormalDisturb'#0#1#4'Name'#6#10'NotDisturb'#9'KeyString'#6
   +#10'NotDisturb'#0#1#4'Name'#6#11'WarningTime'#5'Value'#6#1'5'#9'KeyString'#6
-  +#11'WarningTime'#0#0#8'FileName'#6#13'.BioRythm.xml'#4'left'#2#8#3'top'#3#144
-  +#0#0#0#14'TPopupNotifier'#14'PopupNotifier1'#5'Color'#4#255#255#220#0#9'Icon'
-  +'.Data'#10#12#0#0#0#7'TBitmap'#0#0#0#0#4'Text'#6#4'Text'#5'Title'#6#7'Captio'
-  +'n'#7'Visible'#8#4'left'#3#136#0#3'top'#3#144#0#0#0#6'TTimer'#9'hideTimer'#7
-  +'Enabled'#8#7'OnTimer'#7#14'hideTimerTimer'#4'left'#2'p'#0#0#0
+  +#11'WarningTime'#0#1#4'Name'#6#13'DisturbOnStop'#9'KeyString'#6#13'DisturbOn'
+  +'Stop'#0#0#8'FileName'#6#13'.BioRythm.xml'#4'left'#2#8#3'top'#3#144#0#0#0#14
+  +'TPopupNotifier'#14'PopupNotifier1'#5'Color'#4#255#255#220#0#9'Icon.Data'#10
+  +#12#0#0#0#7'TBitmap'#0#0#0#0#4'Text'#6#4'Text'#5'Title'#6#7'Caption'#7'Visib'
+  +'le'#8#4'left'#3#136#0#3'top'#3#144#0#0#0#6'TTimer'#9'hideTimer'#7'Enabled'#8
+  +#7'OnTimer'#7#14'hideTimerTimer'#4'left'#2'p'#0#0#0
 ]);
