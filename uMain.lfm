@@ -672,6 +672,7 @@ object frmMain: TfrmMain
       end    
       item
         Name = 'DisturbOnStop'
+        Value = 'true'
         KeyString = 'DisturbOnStop'
       end>
     FileName = '.BioRythm.xml'

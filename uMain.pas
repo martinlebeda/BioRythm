@@ -519,7 +519,7 @@ end;
 
 Procedure TfrmMain.disturbOnStop;
 Begin
-  if StrToBool(frmMain.MainAppXMLPropStr.StoredValue[CFG_WARNING_TIME]) then
+  if StrToBool(frmMain.MainAppXMLPropStr.StoredValue[CFG_DISTURB_ON_STOP]) then
     acNormalDisturb.Execute;
 End;
 
