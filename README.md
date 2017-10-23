@@ -28,6 +28,6 @@ Tray icon and menu:
 
 ## Install
 
-[Download](https://www.dropbox.com/sh/3u1xyi47vd2oo9r/AAAl1vJZF6kLd1lruvXbjKVWa?dl=0) and copy program BioRythm to your favourite path and executable. Settings is stored in ".BioRythm.xml" in actual path (I recommend run from home directory).
+[Download](https://www.dropbox.com/sh/3u1xyi47vd2oo9r/AAB5A0msqQv8_UpE1hEUDyuza/BioRythm?dl=0) and copy program BioRythm to your favourite path and executable. Settings is stored in ".BioRythm.xml" in actual path (I recommend run from home directory).
 
 Of course you can checkout and compile (and feel free to modify)...
