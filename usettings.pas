@@ -75,6 +75,8 @@ Begin
 end;
 
 Procedure TfrmSettings.FormShow(Sender: TObject);
+Var
+  lDos: String;
 Begin
   edtStartInterval.Text := frmMain.MainAppXMLPropStr.StoredValue[CFG_INTERVAL_START];
   edtWorkInterval.Text  := frmMain.MainAppXMLPropStr.StoredValue[CFG_INTERVAL_WORK];
@@ -82,7 +84,11 @@ Begin
   edtDndScript.Text := frmMain.MainAppXMLPropStr.StoredValue[CFG_DISTURB_NOT];
   edtDnScript.Text  := frmMain.MainAppXMLPropStr.StoredValue[CFG_DISTURB_NORMAL];
   edtTimerWarning.Text := frmMain.MainAppXMLPropStr.StoredValue[CFG_WARNING_TIME];
-  chDisturbOnStop.Checked := StrToBool(frmMain.MainAppXMLPropStr.StoredValue[CFG_DISTURB_ON_STOP]);
+
+  lDos := frmMain.MainAppXMLPropStr.StoredValue[CFG_DISTURB_ON_STOP];
+  if lDos = '' then
+    lDos := 'true';
+  chDisturbOnStop.Checked := StrToBool(lDos);
 end;
 
 Initialization

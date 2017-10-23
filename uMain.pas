@@ -82,7 +82,6 @@ type
     Procedure FormWindowStateChange(Sender: TObject);
     Procedure IdleTimer1Timer(Sender: TObject);
     procedure nerusitClick(Sender: TObject);
-    procedure rusitClick(Sender: TObject);
     procedure tik_takTimer(Sender: TObject);
     Procedure hideTimerTimer(Sender: TObject);
     procedure ti_owerClick(Sender: TObject);
@@ -263,11 +262,6 @@ begin
   doNotDisturb;
 end;
 
-Procedure TfrmMain.rusitClick(Sender: TObject);
-begin
-
-end;
-
 Procedure TfrmMain.tik_takTimer(Sender: TObject);
 begin
   toEnd := toEnd - 1;
@@ -287,7 +281,10 @@ end;
 Procedure TfrmMain.hideTimerTimer(Sender: TObject);
 Begin
   if FAutoHide then
+  begin
     Application.Minimize;
+    frmMain.WindowState := wsMinimized;
+  End;
 
   hideTimer.Enabled := False;
   FBlockInput := False
@@ -364,7 +361,6 @@ Procedure TfrmMain.AutoHideFormAfter(aAfterSec: Cardinal);
 Begin
   FBlockInput := true;
   FAutoHide := (frmMain.WindowState = wsMinimized) Or Not frmMain.visible;
-
   hideTimer.Interval := aAfterSec * 1000;
   hideTimer.Enabled := True;
 End;
