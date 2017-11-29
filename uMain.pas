@@ -37,6 +37,7 @@ type
     btStartInterval5: TButton;
     btStartInterval6: TButton;
     btnPause: TBitBtn;
+    chAutomaticDnd: TCheckBox;
     ImageList1: TImageList;
     MenuItem1: TMenuItem;
     MenuItem10: TMenuItem;
@@ -369,7 +370,8 @@ Procedure TfrmMain.doStartWorkInterval;
 begin
   startInterval(0);
   startInterval(StrToInt(MainAppXMLPropStr.StoredValue[CFG_INTERVAL_WORK]));
-  doNotDisturb;
+  if chAutomaticDnd.Checked then
+    doNotDisturb;
 end;
 
 Procedure TfrmMain.doNormalDisturb;
@@ -383,7 +385,8 @@ Procedure TfrmMain.doStartPauseInterval;
 begin
   startInterval(0);
   startInterval(StrToInt(MainAppXMLPropStr.StoredValue[CFG_INTERVAL_PAUSE]));
-  doNormalDisturb;
+  if chAutomaticDnd.Checked then
+    doNormalDisturb;
 end;
 
 Procedure TfrmMain.pause;

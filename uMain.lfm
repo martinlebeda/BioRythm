@@ -1,12 +1,12 @@
 object frmMain: TfrmMain
   Left = 403
-  Height = 177
+  Height = 191
   Top = 123
   Width = 260
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Timer'
-  ClientHeight = 177
+  ClientHeight = 191
   ClientWidth = 260
   OnClose = FormClose
   OnCreate = FormCreate
@@ -90,7 +90,7 @@ object frmMain: TfrmMain
   object Prace1: TButton
     Left = 16
     Height = 25
-    Top = 132
+    Top = 160
     Width = 112
     Action = acNotDisturb
     TabOrder = 7
@@ -98,7 +98,7 @@ object frmMain: TfrmMain
   object pauza1: TButton
     Left = 136
     Height = 25
-    Top = 132
+    Top = 160
     Width = 104
     Action = acNormalDisturb
     TabOrder = 8
@@ -118,6 +118,16 @@ object frmMain: TfrmMain
     Width = 35
     Action = acPauseTimer
     TabOrder = 10
+  end
+  object chAutomaticDnd: TCheckBox
+    Left = 24
+    Height = 21
+    Top = 136
+    Width = 196
+    Caption = 'Automatic disturb manage'
+    Checked = True
+    State = cbChecked
+    TabOrder = 11
   end
   object tik_tak: TTimer
     OnTimer = tik_takTimer
